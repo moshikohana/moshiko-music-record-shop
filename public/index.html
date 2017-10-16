@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Music Record Shop</title>
+	<link rel='shortcut icon' type='image/x-icon' href='https://www.audiosparx.com/sa/module/images/controls/icon_tracks.png'/>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	<script src="Jquery/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="Jquery/jquery.lettering.js"></script>
+	<script src="Javascript/musicShop.js"></script>
+	<script src="Javascript/circletype.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="Css/musicShop.css">
+	
+</head>
+
+<body >
+
+	<h1><center>Music <span style="color:red;"> Record </span> Shop</center></h1>
+	
+	<img id="musicshop" src="Images/musicshop.png" style="width:175px; height:175px;" title="Made by Moshiko Ohana and Nir Saado 2016 (C)">
+	</br>
+	</br>
+
+	<label for="check" title="Freeze Background Animation"><input id="checkId" type="checkbox" onclick="onOffAnimation()"><span class="strip"></span></label>
+	</br>
+	</br>
+	</br>
+	</br>
+
+	<button id="addBtn" type="button" class="btn btn-default btn-sm" title="Click to start adding a album" >
+		<span class="glyphicon glyphicon-plus"></span> Add New Album
+    </button>
+		
+	<center><div id="playerSection" title="player Section">
+		
+		<center><audio id="audioElement" controls="controls" style="width:300px; height:40px;">
+		<source src="" type="audio/mpeg">
+		<source id="mp3Source" type="audio/mp3"></source>
+		</audio></center>
+				
+		<img id="recordGif" src="Images/recordspin.gif" style="width:75px; height:75px;">
+		
+		<h4 id="containerSongUrl"></h4>
+
+	</div></center>
+
+	<div id="albumTextId" ></div>
+	
+	<div id="dialog" title="Add New Album">
+		<H4>Album Name</h4>
+		<textarea id="inputAlbum"  required  placeholder="Add Album Name"></textarea>
+		<h4>Artist Name</h4>
+		<textarea id="inputArtist"  required  placeholder="Add Artist Name"></textarea>
+		<h4>Image URL</h4>
+		<textarea id="inputImageURL"  placeholder="HTTP://"></textarea>
+		</br>
+		<button id="saveAlbumBtn" required onclick="saveAlbum()"  type="button" value="Save Album" title="Continue to add MP3 URL's" >Save Album</button>
+		<button id="rstFldBtn" onclick="resetFields()"  type="button" value="Reset Fields" title="Clears all fields">Reset Fields</button>
+		<img id="imgPlcHldr" src="Images/dialog.gif" style="width:200px; height:200px;">
+	</div> 
+	
+	<div id="secondDialog" title="Add Album Playlist">
+		<H4>Song URL 1</h4>
+		<textarea id="songURL1" value="STAM" class="textAreaClass"  required  placeholder="Add Here MP3 URL" style="width:350px;" >https://musicrecordshop.herokuapp.com/Music/Sander-van-Doorn-Need-To-Feel-Love.mp3</textarea>
+		
+		<H4>Song URL 2</h4>
+		<textarea id="songURL2" class="textAreaClass"  required  placeholder="Add Here MP3 URL" style="width:350px;">https://musicrecordshop.herokuapp.com/Music/Air-All-I-Need.mp3</textarea>
+		
+		<H4>Song URL 3</h4>
+		<textarea id="songURL3" class="textAreaClass"  required  placeholder="Add Here MP3 URL" style="width:350px;">https://musicrecordshop.herokuapp.com/Music/Garden-City-Movement-Move-On.mp3</textarea>
+		</br>
+		<button id="addAntrSngBtn" onclick="addAnotherSong()" type="button" class="btn btn-default btn-sm" title="Can you guess What this button do?">
+        <span class="glyphicon glyphicon-plus"></span> Add Another Song </button>
+		
+		<button id="finishAndSaveBtn" onclick="finishAndSave()"  type="button" value="Finish And Save" title="Click when you ready :)">Finish And Save</button>
+		
+		<img id="secondDialogGifId" src="Images/secondDialog.gif" style="width:200px; height:200px;">
+	</div>
+
+	<div style="clear:both;"></div>
+	</br>
+	<div id="footer"><center><strong>Created By Nir (Jones) Saado 2017</strong></center></div>
+
+	</body>
+</html>

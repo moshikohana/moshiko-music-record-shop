@@ -1,0 +1,25 @@
+{
+	"name": "musicrecordshop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"dependencies": {
+		"body-parser": "^1.16.0",
+		"express": "^4.14.1"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"start": "node server.js"
+
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Nir-Saado/MusicRecordShop.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Nir-Saado/MusicRecordShop/issues"
+	},
+	"homepage": "https://github.com/Nir-Saado/MusicRecordShop#readme"
+}
